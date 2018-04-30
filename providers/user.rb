@@ -2,6 +2,8 @@
 # delay writing of user attributes until the end of the chef run. It should not be
 # manually run.
 
+use_inline_resources
+
 def load_current_resource
   @current_resource = new_resource.class.new(@new_resource.user)
 end

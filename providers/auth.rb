@@ -1,3 +1,5 @@
+use_inline_resources
+
 def load_current_resource
   @current_resource = new_resource.class.new(new_resource.name)
   @new_resource.definition = run_context.resource_collection.find(rbac: @new_resource.auth)
